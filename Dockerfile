@@ -11,5 +11,7 @@ COPY ./hugo.conf /usr/local/apache2/conf/httpd.conf
 
 COPY . /usr/local/apache2/htdocs/
 WORKDIR /usr/local/apache2/htdocs/
+RUN apt-get install git -y
+RUN git clone https://github.com/RealOrangeOne/hugo-theme-revealjs.git themes/hugo-theme-revealjs
 RUN hugo
 RUN chown -R www-data:www-data /usr/local/apache2/htdocs/
