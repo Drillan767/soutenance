@@ -1,6 +1,6 @@
 FROM httpd:latest
 
-RUN apt-get update && apt-get install git curl hugo -y
+RUN apt-get update -y && apt-get install git hugo curl -y
 RUN curl https://getcaddy.com | bash -s personal
 RUN chown root:root /usr/local/bin/caddy && chmod 755 /usr/local/bin/caddy
 
