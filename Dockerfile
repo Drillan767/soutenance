@@ -7,7 +7,7 @@ RUN mkdir /srv/app
 WORKDIR /srv/app
 COPY . ./
 RUN git clone https://github.com/RealOrangeOne/hugo-theme-revealjs.git themes/hugo-theme-revealjs
+RUN apt-get apt-get install hugo -y
 RUN hugo
 EXPOSE 2015
 CMD ["caddy"]
-
