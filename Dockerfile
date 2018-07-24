@@ -1,6 +1,6 @@
 FROM httpd:latest
 
-RUN apt-get update -y && apt-get install git hugo curl -y
+RUN apt-get update -y && apt-get install git curl -y
 RUN curl https://getcaddy.com | bash -s personal
 RUN chown root:root /usr/local/bin/caddy && chmod 755 /usr/local/bin/caddy
 
@@ -14,5 +14,6 @@ COPY . /usr/local/apache2/htdocs/
 WORKDIR /usr/local/apache2/htdocs/
 
 RUN git clone https://github.com/RealOrangeOne/hugo-theme-revealjs.git themes/hugo-theme-revealjs
+RUN apt-get install hugo -y
 RUN hugo
 RUN chown -R www-data:www-data /usr/local/apache2/htdocs/
