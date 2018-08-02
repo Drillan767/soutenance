@@ -1,5 +1,3 @@
 ---
-title: Merci pour votre attentiion
+title: Soutenance de mémoire
 ---
-
-### Avez-vous des questions ?
