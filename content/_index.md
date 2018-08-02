@@ -1,9 +1,7 @@
-﻿
+﻿---
+title: Soutenance de mémoire
 
----
-# title: Soutenance de mémoire
-
-title: Merci de votre attention
+# title: Merci de votre attention
 ---
 
-Avez vous des questions ?
+# Avez vous des questions ?
